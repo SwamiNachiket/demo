@@ -1,0 +1,24 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertEmployee1`(EmployeeId int ,EmployeeName varchar(40),EmployeeCity varchar(45))
+begin
+insert into Employee1 values(EmployeeId,EmployeeName,EmployeeCity);
+end
+
+
+
+
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DeleteEmployee1`(p_EmployeeId int)
+begin
+delete from Employee1 where EmployeeId=p_EmployeeId;
+end
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetAllEmployee1`()
+begin
+select * from Employee1;
+end
+
+
+
+CREATE TABLE `employee1` (   `EmployeeId` int(11) NOT NULL,   `EmployeeName` varchar(45) DEFAULT NULL,   `EmployeeCity` varchar(45) DEFAULT NULL,   PRIMARY KEY (`EmployeeId`) ) ENGINE=InnoDB DEFAULT CHARSET=latin1
